@@ -35,12 +35,12 @@ return [
 
     'connections' => [
 
-        'sqlite' => [
+         'sqlite' => [
             'driver' => 'sqlite',
-            'url' => 'DATABASE_URL',
-            'database' => 'database/database.sqlite',
+            'url' => env('DATABASE_URL'),
+            'database' => env('DB_DATABASE', database_path('database.sqlite')),
             'prefix' => '',
-            'foreign_key_constraints' =>  true,
+            'foreign_key_constraints' => env('DB_FOREIGN_KEYS', true),
         ],
 
         
