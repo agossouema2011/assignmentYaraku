@@ -45,6 +45,7 @@ return [
      */
          'sqlite' => [
             'driver' => 'sqlite',
+             'url' => 'database/database.sqlite',
             'database' => 'database/database.sqlite',
 	    // 'database' => database_path('database.sqlite'), // this one was setup prior and did not fix issue
             'prefix' => '',
