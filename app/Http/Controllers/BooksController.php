@@ -9,10 +9,6 @@ use App\Models\User;
 class BooksController extends Controller
 {
 	
-	//these two following variables are used to sort book Title and Author reversibly in ascendent and descendent order
-	 private $TitleSortOrder= 0; //set by default a  variable TitleSortOrder to 0
-	 private $AuthorSortOrder=0; //set by default a  variable AuthorSortOrder to 0
-	
 	//index return the dashboard view with the list of existing books added by the authentified user
      public function index()
     {
@@ -81,41 +77,42 @@ class BooksController extends Controller
 		
 		//$results=Book::orderBy('title','desc')->get();
 		
-		
-		//foreach ($books as $book) {
-			
-			//echo $title;
-		//}
         return view('searchResult',compact('results'));
 		
     	
     }
 	 
-	// This function help to sort the book list by Title in both directions (ASC and DESC order)
-	public function sortByTitle(Request $request)
-    {	
-        $titleOrder =$this->TitleSortOrder;	
-        if( ($titleOrder)%2==0){	// if TitleOrder is an even number sort Books Titles in ascendent order
-			$results=Book::orderBy('title','asc')->get();
-			$titleOrder=$titleOrder+1;
-			$this->TitleSortOrder=$titleOrder;
-			return view('searchResult',compact('results'));
-		}
-		if( ($titleOrder)%2==1){	// if TitleOrder is an odd number sort Books Titles in descendent order
-			$results=Book::orderBy('title','desc')->get();
-			$titleOrder=$titleOrder+1;
-			$this->TitleSortOrder=$titleOrder;
-			return view('searchResult',compact('results'));
-		}
+	// This function help to sort the books Titles in ASCENDING order
+	
+	public function sortTitleASC(Request $request)
+    {	        
+		$results=Book::orderBy('title','ASC')->get();			
+		return view('searchResult',compact('results'));
         
     }
 	
-	// This method help to sort the book list by Author in both directions (ASC and DESC order)
-	public function sortByAuthor(Request $request)
+	// This function help to sort the books Titles in DESCENDING order
+	
+	public function sortTitleDESC(Request $request)
+    {	        
+		$results=Book::orderBy('title','DESC')->get();			
+		return view('searchResult',compact('results'));
+        
+    }
+	
+	// This method help to sort the books Authors in ASCENDING order
+	public function sortAuthorASC(Request $request)
     {
-		$results=Book::orderBy('author','desc')->get();
+		$results=Book::orderBy('author','ASC')->get();
         return view('searchResult',compact('results'));
     }	
+	
+	// This method help to sort the books Authors in DESCENDING order
+	public function sortAuthorDESC(Request $request)
+    {
+		$results=Book::orderBy('author','DESC')->get();
+        return view('searchResult',compact('results'));
+    }
 	
 	
 	// This method export all the books with both Titles and Authors  as CSV

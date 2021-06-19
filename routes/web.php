@@ -22,9 +22,11 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function(){
 	Route::post('/book',[BooksController::class, 'create']);
 	Route::get('/book/{book}', [BooksController::class, 'edit']);
 	Route::post('/book/{book}', [BooksController::class, 'update']);
-	Route::get('/sortByTitle', [BooksController::class, 'sortByTitle']);
-	Route::get('/sortByAuthor', [BooksController::class, 'sortByAuthor']);
-		
+	Route::get('/sortTitleASC', [BooksController::class, 'sortTitleASC']);
+	Route::get('/sortTitleDESC', [BooksController::class, 'sortTitleDESC']);
+	Route::get('/sortAuthorASC', [BooksController::class, 'sortAuthorASC']);
+	Route::get('/sortAuthorDESC', [BooksController::class, 'sortAuthorDESC']);
+	
 	Route::get('/exportCSV/{type}', [BooksController::class, 'exportCSV']);//Parameter 'type' helps to identify what to export in CSV 
 	Route::get('/exportXMLall', [BooksController::class, 'exportXMLall']);
 	Route::get('/exportXMLtitles', [BooksController::class, 'exportXMLtitles']);

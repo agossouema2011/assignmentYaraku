@@ -57,10 +57,16 @@ use App\Models\Book;
 			<div class="flex">
 			 	
 				<div class="flex-auto text-right ">
-						<a href="/sortByTitle" class="border border-primary rounded" style="margin:10px;">Sort Title↑↓</a>
+						<a href="/sortTitleASC" class="border border-primary rounded" style="margin:10px;">Sort_Titles↑</a>
 				</div>
 				<div class="flex-auto text-right ">
-						<a href="/sortByAuthor" class="border border-primary rounded" style="margin:10px;">Sort Author↑↓</a>
+						<a href="/sortTitleDESC" class="border border-primary rounded" style="margin:10px;">Sort_Titles↓</a>
+				</div>
+				<div class="flex-auto text-right ">
+						<a href="/sortAuthorASC" class="border border-primary rounded" style="margin:10px;">Sort_Authors↑</a>
+				</div>
+				<div class="flex-auto text-right ">
+						<a href="/sortAuthorDESC" class="border border-primary rounded" style="margin:10px;">Sort_Authors↓</a>
 				</div>
 				<?php 
 						    $type=1; // for exporting both Titles and Authors in CSV
