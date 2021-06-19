@@ -8,14 +8,16 @@ use App\Models\User;
 
 class BooksController extends Controller
 {
-	private $TitleSortOrder=0; //by default TitleSortOrder is 1
-	private $AuthorSortOrder=0; //by default AuthorSortOrder is 1
 	
-	//index return the dashboard view with the list of existing books
+	//these two following variables are used to sort book Title and Author reversibly in ascendent and descendent order
+	 private $TitleSortOrder= 0; //set by default a  variable TitleSortOrder to 0
+	 private $AuthorSortOrder=0; //set by default a  variable AuthorSortOrder to 0
+	
+	//index return the dashboard view with the list of existing books added by the authentified user
      public function index()
     {
-        $books = Book::all();
-		//$books = auth()->user()->books();
+        //$books = Book::all();
+		$books = auth()->user()->books();
         return view('dashboard', compact('books'));
     }	
    
@@ -29,11 +31,11 @@ class BooksController extends Controller
             'author' => 'required'	//The author of the book is a required field 		
         ]);
     	$book = new Book(); // an instance of Book
-		$book->title = $request->title; //assigned the new book title
-    	$book->author = $request->author; //assigned the new book author
-		$book->user_id = auth()->user()->id;    	
+		$book->title = $request->title; //assigned the new book's title
+    	$book->author = $request->author; //assigned the new book's author
+		$book->user_id = auth()->user()->id; //links the entered book to the current user   	
     	$book->save(); //save the new book into the table books
-    	return redirect('/dashboard'); 
+    	return redirect('/dashboard');  // redirect to dashboard
     }
 
     // This method is to edit a book author name
@@ -89,22 +91,26 @@ class BooksController extends Controller
     	
     }
 	 
-	// This function help to sort the book list by Title in both directions (ASC and DEC order)
+	// This function help to sort the book list by Title in both directions (ASC and DESC order)
 	public function sortByTitle(Request $request)
     {	
-	     $this->TitleSortOrder=( $this->TitleSortOrder+1)%2;
-        if( $this->TitleSortOrder==1){	// if Title we
-			$results=Book::orderBy('title','desc')->get();
+        $titleOrder =$this->TitleSortOrder;	
+        if( ($titleOrder)%2==0){	// if TitleOrder is an even number sort Books Titles in ascendent order
+			$results=Book::orderBy('title','asc')->get();
+			$titleOrder=$titleOrder+1;
+			$this->TitleSortOrder=$titleOrder;
 			return view('searchResult',compact('results'));
 		}
-		if( $this->TitleSortOrder==0){	
-			$results=Book::orderBy('title','asc')->get();
+		if( ($titleOrder)%2==1){	// if TitleOrder is an odd number sort Books Titles in descendent order
+			$results=Book::orderBy('title','desc')->get();
+			$titleOrder=$titleOrder+1;
+			$this->TitleSortOrder=$titleOrder;
 			return view('searchResult',compact('results'));
 		}
         
     }
 	
-	// This method help to sort the book list by Author in both directions (ASC and DEC order)
+	// This method help to sort the book list by Author in both directions (ASC and DESC order)
 	public function sortByAuthor(Request $request)
     {
 		$results=Book::orderBy('author','desc')->get();
@@ -115,7 +121,7 @@ class BooksController extends Controller
 	// This method export all the books with both Titles and Authors  as CSV
 	public function exportCSV(Request $request, $type)
 	{
-	   $books = Book::all();
+	   $books = Book::all(); //select all the books existing in the Books table
 
         if($type==1){// download both Titles and Descriptions in CSV
 		

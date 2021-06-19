@@ -17,17 +17,18 @@
                         <span class="text-danger">{{ $errors->first('title') }}</span>
                     @endif
                 </div>
-
+                <br>
                 <div class="form-group">
                     Author <font color="red">*</font>:<input type="text" name="author" class="" value="{{$book->author }}">
                     @if ($errors->has('author'))
                         <span class="text-danger">{{ $errors->first('author') }}</span>
                     @endif
                 </div>
-
+                <br>
                 <div class="form-group">
-                    <button type="submit" name="update" class="bg-blue-500 hover:bg-blue-700  font-bold py-2 px-4 rounded">Update</button>
+                    <button type="submit" name="update" class="border border-primary rounded" style="background-color: blue; color:white; font-size: 20px; width: 100px;">Update</button>
                 </div>
+				<br>
             {{ csrf_field() }}
             </form>
         </div>
