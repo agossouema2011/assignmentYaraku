@@ -1,3 +1,12 @@
+
+<div align="right" width="30%">
+		<form method="POST" action="{{ route('logout') }}">
+			@csrf
+				<x-jet-dropdown-link href="{{ route('logout') }}" onclick="event.preventDefault(); this.closest('form').submit();">
+					<i class="fa fa-sign-out"></i><b>{{ __('Logout') }}</b>
+			   </x-jet-dropdown-link>
+		</form>
+</div>
 <x-app-layout>
 <x-slot name="header">
     <h2 class="font-semibold text-xl text-gray-800 leading-tight">
