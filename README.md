@@ -1,27 +1,29 @@
 <b><u>Requirements</u></b><br><br>
 
 -Laravel Composer<br>
--Clone the repository: https://github.com/agossouema2011/assignmentYaraku/ <br>
+-Clone the repository at: https://github.com/agossouema2011/assignmentYaraku/ <br>
 -Browser<br>
 
 <b><u>To run</u></b><br>
+	<b>Run on free host</b><br>
+       - Run the following link in your browser: <i>http://assignment-agossou.atwebpages.com/login<i>
+       <br><br>-Login with: <br> <u>User name</u>: agossouema2011@gmail.com, <br> <u>Password</u>: living2021<br>
+	   <br>- You can also create your own user at:	   http://assignment-agossou.atwebpages.com/register
+    
     <b>On your local machine</b><br>
     It’s assumed you have composer installed on your machine so navigate in your console this roject folder for this project and type the following command on the console: <i>php artisan serve</i><br>
     You should see on the console screen a message containing a link like <i> http://127.0.0.1:8000/</i>. Here the port is 8000, In your case it might be a different port.
     <br><br>
     Open up your browser and paste in the link http://127.0.0.1:8000/ and you should see the application user authentification interface if everything goes well.
-    <br><br>- Log in with <u>User name</u>: agossouema2011@gmail.com, and <u>Password</u>: living2021<br>
+    <br><br>- Log in with:<br><u>User name</u>: agossouema2011@gmail.com, <br> <u>Password</u>: living2021<br>
     - You can also create new user by clicking on "Register" link above in the right corner.<br><br>
    <b> Once logged in properly, you can now 'Add' new book, 'edit','delete', 'export book list in CSV/XML', 'Search a book' and 'Sort'.<br><br>
-       
-   <b>Run on free host Heroku</b><br>
-       Run the following link in your browser: <i>https://assignment-yaraku.herokuapp.com/<i>
-       <br><br>
-    
+         
 
-       <h2>Note</h2>: <h3>We use SQLite database, so you don't need to install an external database.
+       <br><br><b>Note: <i>We use "SQLite" database, so you don't need to install an external database.</i></b>
 
   <br><br><br><br>
+  <!--
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 <p align="center">
@@ -84,3 +86,4 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+-->
