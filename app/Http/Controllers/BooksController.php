@@ -70,7 +70,7 @@ class BooksController extends Controller
 			'searchText' => 'required',            		
         ]);
 		*/
-		$searchText=$_POST['searchText'];
+		$searchText=trim($_POST['searchText']);
     	//$results= Book::select(['id','title','author','created_at','updated_at']);
 		//$results=Book::all()->where('title', $searchText);	
 		$results = Book::Where('title', 'LIKE', '%'.$searchText.'%')->orWhere('author', 'LIKE', '%'.$searchText.'%')->get();
