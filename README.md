@@ -13,13 +13,13 @@
     You should see on the console screen a message containing a link like <b><i> http://127.0.0.1:8000/</i></b>. Here the port is 8000, In your case it might be a different port.
     <br><br>
     Open in your browser the link http://127.0.0.1:8000/ and you should see the application user authentification interface if everything goes well.
-    <br><br>- Click on "login" link which is above in the right corner and Log in with:<br><u>User name</u>: agossouema2011@gmail.com, <br> <u>Password</u>: living2021<br>
+    <br><br>- Click on "login" link which is above in the right corner and Log in with:<br><u>User name</u>: agossouema2011@gmail.com <br> <u>Password</u>: living2021<br>
     - You can also create new user by clicking on "Register" link .<br><br>
    <b> Once logged in properly, you can now use the application: 'Add' new book, 'edit','delete', 'export book list in CSV/XML', 'Search a book' and 'Sort'.<br>
    
-   <br><br><b>Note: <i>We used "SQLite" database for the implementation of this app, so you don't need to install an external database.</i></b>
+   <br><b>Note: <i>We used "SQLite" database for the implementation of this app, so you don't need to install an external database.</i></b>
 
-  <br><b>If you get any problem in deploying or running this application, feel free to email us at <i>agossouema2011@gmail<i>.  <br>
+  <b>If you get any problem in deploying or running this application, feel free to email us at <i>agossouema2011@gmail.com<i>.  <br>
   <b>Thank you</b>
   <br><br><br>
   <!--
