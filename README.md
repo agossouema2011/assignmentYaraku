@@ -7,16 +7,16 @@
 <b><u>To run</u></b><br>
 	<b>Run on free host</b><br>
        - Run the following link in your browser: <i>http://assignment-agossou.atwebpages.com/login<i>
-       <br><br>-Login with: <br> <u>User name</u>: agossouema2011@gmail.com, <br> <u>Password</u>: living2021<br>
-	   <br>- You can also create your own user at:	   http://assignment-agossou.atwebpages.com/register<br>
-    <b>On your local machine</b><br>
-    It’s assumed you have composer installed on your machine so navigate in your console this roject folder for this project and type the following command on the console: <i>php artisan serve</i><br>
-    You should see on the console screen a message containing a link like <i> http://127.0.0.1:8000/</i>. Here the port is 8000, In your case it might be a different port.
+       <br>-Login with: <br> <u>User name</u>: agossouema2011@gmail.com <br> <u>Password</u>: living2021
+	   <br>- If you desire, You can also create your own user at: http://assignment-agossou.atwebpages.com/register<br>
+    <br><b>On your local machine</b><br>
+    It is assumed you have laravel "composer" installed on your machine. <br>If so, after downloading this project folder from the above github link, unzip it, and navigate in your console to this project folder and type the following command on the console: <b><i>php artisan serve</i></b><br>
+    You should see on the console screen a message containing a link like <b><i> http://127.0.0.1:8000/</i></b>. Here the port is 8000, In your case it might be a different port.
     <br><br>
-    Open up your browser and paste in the link http://127.0.0.1:8000/ and you should see the application user authentification interface if everything goes well.
-    <br><br>- Log in with:<br><u>User name</u>: agossouema2011@gmail.com, <br> <u>Password</u>: living2021<br>
-    - You can also create new user by clicking on "Register" link above in the right corner.<br><br>
-   <b> Once logged in properly, you can now 'Add' new book, 'edit','delete', 'export book list in CSV/XML', 'Search a book' and 'Sort'.<br><br>
+    Open in your browser the link http://127.0.0.1:8000/ and you should see the application user authentification interface if everything goes well.
+    <br><br>- Click on "login" link which is above in the right corner and Log in with:<br><u>User name</u>: agossouema2011@gmail.com, <br> <u>Password</u>: living2021<br>
+    - You can also create new user by clicking on "Register" link .<br><br>
+   <b> Once logged in properly, you can now use the application: 'Add' new book, 'edit','delete', 'export book list in CSV/XML', 'Search a book' and 'Sort'.<br><br>
    
    <br><br><b>Note: <i>We use "SQLite" database, so you don't need to install an external database.</i></b>
 
