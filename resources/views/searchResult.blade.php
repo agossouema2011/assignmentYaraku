@@ -59,48 +59,49 @@
 				
              <div class="flex-auto text-2xl mb-4" style="text-align:center;">Search/Sort Results</div>
             
-			<div class="flex">
+			 
+			<div style="margin: 0 auto;  max-width: 700px; display: flex;" >
 			 	
-				<div class="flex-auto text-right ">
+				<div >
 						<a href="/sortTitleASC" class="border border-primary rounded" style="margin:10px;">Sort_Titles↑</a>
 				</div>
-				<div class="flex-auto text-right ">
+				<div >
 						<a href="/sortTitleDESC" class="border border-primary rounded" style="margin:10px;">Sort_Titles↓</a>
 				</div>
-				<div class="flex-auto text-right ">
+				<div>
 						<a href="/sortAuthorASC" class="border border-primary rounded" style="margin:10px;">Sort_Authors↑</a>
 				</div>
-				<div class="flex-auto text-right ">
+				<div >
 						<a href="/sortAuthorDESC" class="border border-primary rounded" style="margin:10px;">Sort_Authors↓</a>
 				</div>
 				<?php 
 						    $type=1; // for exporting both Titles and Authors in CSV
 				?>
-				<div class="flex-auto text-right ">
+				<div >
 						<a href="/exportCSV/{{$type}}" id="exportCSV" class="border border-primary rounded" style="margin:10px;" onclick="eventBooks(event.target);">Export CSV</a>
 				</div>
-				<div class="flex-auto text-right ">
+				<div>
 						<a href="/exportXMLall" id="exportXMLall" class="border border-primary rounded" style="margin:10px;" onclick="eventBooks(event.target);">Export XML</a>
 				</div>
 			</div>
-			<br>
-			<div class="flex">
+		    <br>
+			<div style="margin: 0 auto;  max-width: 700px; display: flex;" >
 				<?php 
 						    $type=2; // for exporting only Titles in CSV
 				 ?>
-				<div class="flex-auto text-right">
+				<div>
 						<a href="/exportCSV/{{$type}}" id="exportCSVtitles" class="border border-primary rounded" style="margin:10px;" onclick="eventBooks(event.target);">Export_CSV(Titles)</a>
 				</div>
 				<?php 
 						    $type=3; // for exporting only Authors in CSV
 				 ?>
-				<div class="flex-auto text-right">
+				<div >
 						<a href="/exportCSV/{{$type}}" id="exportCSVauthors" class="border border-primary rounded" style="margin:10px;" onclick="eventBooks(event.target);">Export_CSV(Authors)</a>
 				</div>
-				<div class="flex-auto text-right ">
+				<div >
 						<a href="/exportXMLtitles" id="exportXMLtitles" class="border border-primary  rounded" style="margin:10px;" onclick="eventBooks(event.target);">Export_XML(Titles)</a>
 				</div>
-				<div class="flex-auto text-right ">
+				<div>
 						<a href="/exportXMLauthors" id="exportXMLauthors" class="border border-primary rounded" style="margin:10px;" onclick="eventBooks(event.target);">Export_XML(Authors)</a>
 				</div>
 			 </div>
